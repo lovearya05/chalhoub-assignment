@@ -38,6 +38,6 @@ Last checked: **26 tests passed**, along with TypeScript, formatting and bundle 
 
 Each assignment step has its own `step-1` through `step-6` branch. `main` contains the combined result. See [the branch list and decisions](docs/PROGRESS.md).
 
-The catalog is hosted on GitHub and the Expo project is linked. Native builds and OTA publication are pending. AWS/GCP hosting has not been configured.
+The catalog is hosted on GitHub and the Expo project is linked. Preview builds have been requested: [Android APK](https://expo.dev/accounts/lovearya05/projects/tiger-store/builds/c77ad74f-83cc-4a89-a255-8bc6ef93afcb) and [iOS Simulator](https://expo.dev/accounts/lovearya05/projects/tiger-store/builds/5c9e6b77-f58f-466e-9dc2-fd98af539c5e). Build completion, device checks and OTA publication are pending. AWS/GCP hosting has not been configured.
 
 See [developer setup](docs/SETUP.md) for environment and build instructions, and [the assignment summary](docs/ASSIGNMENT.md) for requirements.

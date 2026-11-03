@@ -21,7 +21,7 @@ Each branch builds on the previous one. `main` combines all stages without remov
 
 ## Deployment status
 
-The catalog is hosted on GitHub and the Expo project is linked. AWS/GCP hosting, native builds, OTA publication and device/visual checks are pending. Local verification is complete. See [developer setup](SETUP.md) for environment details.
+The catalog is hosted on GitHub and the Expo project is linked. Android and iOS Simulator builds have been requested on EAS. Build completion, OTA publication and device/visual checks are pending; AWS/GCP hosting is not configured. Local verification is complete. See [developer setup](SETUP.md) for environment details.
 
 To inspect the work:
 
