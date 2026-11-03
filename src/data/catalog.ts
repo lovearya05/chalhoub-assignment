@@ -1,0 +1,20 @@
+import { Product } from '../types/catalog';
+
+const base = {
+  price: 250, currency: 'AED', category: 'MEN' as const,
+  sizes: ['S', 'M', 'L', 'XL'],
+  colors: [
+    { name: 'Black', hex: '#262626' }, { name: 'Mist', hex: '#bfd2d4' },
+    { name: 'White', hex: '#ffffff' }, { name: 'Teal', hex: '#004c49' },
+  ],
+  description: 'Opt for a bold look with this T-shirt. With its iconic Tiger print on the chest, it is sure to turn heads. Pair it with jogging trousers and sneakers for a casual sportswear look.',
+  details: ['Short-sleeved T-shirt.', 'Round neck.', 'Tiger embroidered on the chest.'],
+  imageUrl: 'reference',
+};
+export const products: Product[] = [
+  { ...base, id: 'tiger-red', title: 'Tiger Medium Red', crop: { x: 24, y: 211, width: 324, height: 347 } },
+  { ...base, id: 'tiger-teal', title: 'Tiger Deep Teal', crop: { x: 25, y: 1027, width: 63, height: 69 } },
+  { ...base, id: 'tiger-mist', title: 'Tiger Soft Mist', crop: { x: 113, y: 1027, width: 63, height: 69 } },
+  { ...base, id: 'tiger-black', title: 'Tiger Classic Black', crop: { x: 201, y: 1027, width: 63, height: 69 } },
+  { ...base, id: 'tiger-grey', title: 'Tiger Pearl Grey', crop: { x: 289, y: 1027, width: 63, height: 69 } },
+];
