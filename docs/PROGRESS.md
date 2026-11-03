@@ -9,7 +9,7 @@ Each branch builds on the previous one. `main` combines all stages without remov
 | 3    | `step-3/remote-catalog`   | Added HTTP catalog loading, validation and retry. GitHub hosts the sample catalog. |
 | 4    | `step-4/my-account`       | Added the Rick and Morty profile screen.                                           |
 | 5    | `step-5/testing`          | Added tests, CI and device test scenarios.                                         |
-| 6    | `step-6/eas-delivery`     | Prepared EAS builds and OTA configuration. The Expo project is linked.             |
+| 6    | `step-6/eas-delivery`     | Published Android/iOS Simulator builds and matching baseline OTA updates.          |
 
 ## Main decisions
 
@@ -21,7 +21,9 @@ Each branch builds on the previous one. `main` combines all stages without remov
 
 ## Deployment status
 
-The catalog is hosted on GitHub and the Expo project is linked. Android and iOS Simulator builds have been requested on EAS. Build completion, OTA publication and device/visual checks are pending; AWS/GCP hosting is not configured. Local verification is complete. See [developer setup](SETUP.md) for environment details.
+The catalog is hosted on GitHub. Android APK and iOS Simulator builds finished successfully; artifacts were downloaded and checked. Published OTA updates match each build's native runtime and are served by the preview update endpoint.
+
+The Android OTA was published from its exact build revision after the CLI changed iOS config during the combined build. Device/visual checks and OTA application on an installed app remain pending. AWS/GCP hosting is not configured. See [the README](../README.md#project-history-and-status) for links.
 
 To inspect the work:
 

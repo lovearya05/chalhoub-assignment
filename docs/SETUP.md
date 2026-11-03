@@ -48,4 +48,4 @@ npx eas-cli@latest update --channel preview --environment preview --message "Des
 
 Reopen the installed app to download the update, then relaunch to apply it. Native dependency changes require a new compatible build.
 
-See [testing](TESTING.md) for verification commands and device scenarios. The Expo project is linked and the catalog is available on GitHub. Native builds and OTA publication are pending; AWS/GCP hosting is not configured.
+See [testing](TESTING.md) for verification commands and device scenarios. Published preview builds and OTA links are in the [README](../README.md#project-history-and-status). Installed-app checks remain pending. The catalog uses GitHub instead of AWS/GCP.

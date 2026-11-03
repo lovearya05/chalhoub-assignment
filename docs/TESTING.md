@@ -32,7 +32,7 @@ Tests mock HTTP responses so they can run without the live APIs.
 - [ ] Disconnect the network or block an image, then retry.
 - [ ] Install both native builds and verify an OTA update after relaunch.
 
-Manual verification is **pending**. Bundle exports validate bundling; installed builds still need device and visual checks.
+Cloud artifacts were downloaded and checked for integrity and the remote catalog URL. OTA runtimes match both native fingerprints, and the preview endpoint serves each matching update. Installed-app, visual and on-device OTA checks are still **pending**.
 
 ## Device automation
 

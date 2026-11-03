@@ -38,6 +38,13 @@ Last checked: **26 tests passed**, along with TypeScript, formatting and bundle 
 
 Each assignment step has its own `step-1` through `step-6` branch. `main` contains the combined result. See [the branch list and decisions](docs/PROGRESS.md).
 
-The catalog is hosted on GitHub and the Expo project is linked. Preview builds have been requested: [Android APK](https://expo.dev/accounts/lovearya05/projects/tiger-store/builds/c77ad74f-83cc-4a89-a255-8bc6ef93afcb) and [iOS Simulator](https://expo.dev/accounts/lovearya05/projects/tiger-store/builds/5c9e6b77-f58f-466e-9dc2-fd98af539c5e). Build completion, device checks and OTA publication are pending. AWS/GCP hosting has not been configured.
+The catalog is hosted on GitHub. Both preview builds and baseline OTA updates are published:
+
+| Platform      | Download                                                                                     | OTA update                                                                                                               |
+| ------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Android       | [APK](https://expo.dev/artifacts/eas/HgMRwBD1XfgRFwfS1dNfHaQCoZTC-_smmPHl_LloWyQ.apk)        | [Preview update](https://expo.dev/accounts/lovearya05/projects/tiger-store/updates/2ca693a5-f06c-400a-92ce-60cb94b5d7c1) |
+| iOS Simulator | [Archive](https://expo.dev/artifacts/eas/4LeESQBcDWtJIscslZXEVNXzEs_s-h8A0gxxxa7zh2o.tar.gz) | [Preview update](https://expo.dev/accounts/lovearya05/projects/tiger-store/updates/20b49d4a-6b28-436d-81e1-d711d8c8566a) |
+
+Artifact integrity, embedded catalog URLs and OTA runtime compatibility are verified. Installed-app, visual and on-device OTA checks are pending. The iOS archive requires Mac/Xcode Simulator; it cannot install on an iPhone. AWS/GCP hosting is not configured.
 
 See [developer setup](docs/SETUP.md) for environment and build instructions, and [the assignment summary](docs/ASSIGNMENT.md) for requirements.
