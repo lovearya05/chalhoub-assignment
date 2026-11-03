@@ -1,0 +1,14 @@
+appId: com.lovepreet.tigerstore
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: My account
+    timeout: 20000
+- tapOn: My account
+- extendedWaitUntil:
+    visible: Rick Sanchez
+    timeout: 20000
+- assertVisible: Earth (C-137)
+- tapOn: '‹ Back to shop'
+- assertVisible: Tiger Medium Red

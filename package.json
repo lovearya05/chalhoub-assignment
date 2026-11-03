@@ -13,7 +13,13 @@
     "zustand": "^5.0.16"
   },
   "devDependencies": {
+    "@testing-library/react-native": "^14.1.0",
+    "@types/jest": "30.0.0",
     "@types/react": "~19.3.0",
+    "jest": "~30.5.2",
+    "jest-expo": "~58.0.13",
+    "prettier": "^3.9.10",
+    "react-test-renderer": "^19.3.0",
     "typescript": "~6.0.3"
   },
   "scripts": {
@@ -23,7 +29,11 @@
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "api": "node scripts/api-server.mjs",
-    "dev": "node --env-file-if-exists=.env.local scripts/dev.mjs"
+    "dev": "node --env-file-if-exists=.env.local scripts/dev.mjs",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "private": true,
   "engines": {

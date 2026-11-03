@@ -32,3 +32,12 @@ The original brief is preserved in [ASSIGNMENT.md](ASSIGNMENT.md).
 - Shows the real API avatar, name, status, species, gender, origin and location, with loading, validation, error, retry and refresh.
 - Added back navigation, including Android hardware back. The shared bag survives account navigation.
 - Request completion is ignored after leaving the account screen to prevent stale UI updates.
+
+## Step 5 — verification
+
+- Added domain, network and app integration tests with Jest / React Native Testing Library, plus GitHub Actions checks.
+- Added explicit test scenarios and proposed Maestro flows for native functional testing.
+- Verified catalog and artwork endpoints through actual local HTTP requests; verified the Rick and Morty endpoint against its public API.
+- Added image failure feedback with retry. Kept internal configuration instructions in documentation rather than product-facing error messages.
+- Browser automation was attempted but its host was unavailable. Device flows and visual acceptance checks remain explicitly unverified.
+- Validation at this stage: TypeScript passed; 26 tests in 4 suites passed; measured line coverage 92.71%; Prettier passed; web export succeeded. Actual HTTP catalog/image endpoints returned successfully. Coverage is an indicator, not a substitute for device checks.

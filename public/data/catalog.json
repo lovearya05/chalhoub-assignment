@@ -4,12 +4,7 @@
       "price": 250,
       "currency": "AED",
       "category": "MEN",
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "sizes": ["S", "M", "L", "XL"],
       "colors": [
         {
           "name": "Black",
@@ -29,11 +24,7 @@
         }
       ],
       "description": "Opt for a bold look with this T-shirt. With its iconic Tiger print on the chest, it is sure to turn heads. Pair it with jogging trousers and sneakers for a casual sportswear look.",
-      "details": [
-        "Short-sleeved T-shirt.",
-        "Round neck.",
-        "Tiger embroidered on the chest."
-      ],
+      "details": ["Short-sleeved T-shirt.", "Round neck.", "Tiger embroidered on the chest."],
       "imageUrl": "./task.png",
       "id": "tiger-red",
       "title": "Tiger Medium Red",
@@ -48,12 +39,7 @@
       "price": 250,
       "currency": "AED",
       "category": "MEN",
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "sizes": ["S", "M", "L", "XL"],
       "colors": [
         {
           "name": "Black",
@@ -73,11 +59,7 @@
         }
       ],
       "description": "Opt for a bold look with this T-shirt. With its iconic Tiger print on the chest, it is sure to turn heads. Pair it with jogging trousers and sneakers for a casual sportswear look.",
-      "details": [
-        "Short-sleeved T-shirt.",
-        "Round neck.",
-        "Tiger embroidered on the chest."
-      ],
+      "details": ["Short-sleeved T-shirt.", "Round neck.", "Tiger embroidered on the chest."],
       "imageUrl": "./task.png",
       "id": "tiger-teal",
       "title": "Tiger Deep Teal",
@@ -92,12 +74,7 @@
       "price": 250,
       "currency": "AED",
       "category": "MEN",
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "sizes": ["S", "M", "L", "XL"],
       "colors": [
         {
           "name": "Black",
@@ -117,11 +94,7 @@
         }
       ],
       "description": "Opt for a bold look with this T-shirt. With its iconic Tiger print on the chest, it is sure to turn heads. Pair it with jogging trousers and sneakers for a casual sportswear look.",
-      "details": [
-        "Short-sleeved T-shirt.",
-        "Round neck.",
-        "Tiger embroidered on the chest."
-      ],
+      "details": ["Short-sleeved T-shirt.", "Round neck.", "Tiger embroidered on the chest."],
       "imageUrl": "./task.png",
       "id": "tiger-mist",
       "title": "Tiger Soft Mist",
@@ -136,12 +109,7 @@
       "price": 250,
       "currency": "AED",
       "category": "MEN",
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "sizes": ["S", "M", "L", "XL"],
       "colors": [
         {
           "name": "Black",
@@ -161,11 +129,7 @@
         }
       ],
       "description": "Opt for a bold look with this T-shirt. With its iconic Tiger print on the chest, it is sure to turn heads. Pair it with jogging trousers and sneakers for a casual sportswear look.",
-      "details": [
-        "Short-sleeved T-shirt.",
-        "Round neck.",
-        "Tiger embroidered on the chest."
-      ],
+      "details": ["Short-sleeved T-shirt.", "Round neck.", "Tiger embroidered on the chest."],
       "imageUrl": "./task.png",
       "id": "tiger-black",
       "title": "Tiger Classic Black",
@@ -180,12 +144,7 @@
       "price": 250,
       "currency": "AED",
       "category": "MEN",
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "sizes": ["S", "M", "L", "XL"],
       "colors": [
         {
           "name": "Black",
@@ -205,11 +164,7 @@
         }
       ],
       "description": "Opt for a bold look with this T-shirt. With its iconic Tiger print on the chest, it is sure to turn heads. Pair it with jogging trousers and sneakers for a casual sportswear look.",
-      "details": [
-        "Short-sleeved T-shirt.",
-        "Round neck.",
-        "Tiger embroidered on the chest."
-      ],
+      "details": ["Short-sleeved T-shirt.", "Round neck.", "Tiger embroidered on the chest."],
       "imageUrl": "./task.png",
       "id": "tiger-grey",
       "title": "Tiger Pearl Grey",

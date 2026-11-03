@@ -10,14 +10,40 @@ import { AccountScreen } from './src/screens/AccountScreen';
 export default function App() {
   const shop = useShop();
   const { products, status, error, load } = useCatalog();
-  useEffect(() => { void load(); }, [load]);
+  useEffect(() => {
+    void load();
+  }, [load]);
   useEffect(() => {
     const listener = BackHandler.addEventListener('hardwareBackPress', () => {
-      if (shop.page === 'account') { shop.navigate('shop'); return true; }
+      if (shop.page === 'account') {
+        shop.navigate('shop');
+        return true;
+      }
       return false;
     });
     return () => listener.remove();
   }, [shop.page, shop.navigate]);
-  return <SafeAreaProvider><SafeAreaView style={styles.root}><StatusBar barStyle="dark-content" />{shop.page === 'account' ? <AccountScreen onBack={() => shop.navigate('shop')} /> : status !== 'ready' ? <RequestState loading={status !== 'error'} error={error ? `${error}\nCheck the API server or EXPO_PUBLIC_CATALOG_URL.` : null} onRetry={() => void load()} /> : <ProductScreen products={products} productId={shop.productId} onSelect={shop.selectProduct} cart={shop.cart} onAdd={shop.addToCart} onRemove={shop.removeFromCart} onAccount={() => shop.navigate('account')} />}</SafeAreaView></SafeAreaProvider>;
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.root}>
+        <StatusBar barStyle="dark-content" />
+        {shop.page === 'account' ? (
+          <AccountScreen onBack={() => shop.navigate('shop')} />
+        ) : status !== 'ready' ? (
+          <RequestState loading={status !== 'error'} error={error} onRetry={() => void load()} />
+        ) : (
+          <ProductScreen
+            products={products}
+            productId={shop.productId}
+            onSelect={shop.selectProduct}
+            cart={shop.cart}
+            onAdd={shop.addToCart}
+            onRemove={shop.removeFromCart}
+            onAccount={() => shop.navigate('account')}
+          />
+        )}
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
 }
 const styles = StyleSheet.create({ root: { flex: 1, backgroundColor: '#fff' } });
