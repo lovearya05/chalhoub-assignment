@@ -2,14 +2,14 @@
 
 Each branch builds on the previous one. `main` combines all stages without removing their history.
 
-| Step | Branch                    | Work done                                                                    |
-| ---- | ------------------------- | ---------------------------------------------------------------------------- |
-| 1    | `step-1/product-screen`   | Built the layout and shopping interactions.                                  |
-| 2    | `step-2/state-management` | Added a typed Zustand store.                                                 |
-| 3    | `step-3/remote-catalog`   | Added HTTP catalog loading, validation and retry. Remote hosting is pending. |
-| 4    | `step-4/my-account`       | Added the Rick and Morty profile screen.                                     |
-| 5    | `step-5/testing`          | Added tests, CI and device test scenarios.                                   |
-| 6    | `step-6/eas-delivery`     | Prepared EAS builds and OTA configuration. Publishing is pending.            |
+| Step | Branch                    | Work done                                                                          |
+| ---- | ------------------------- | ---------------------------------------------------------------------------------- |
+| 1    | `step-1/product-screen`   | Built the layout and shopping interactions.                                        |
+| 2    | `step-2/state-management` | Added a typed Zustand store.                                                       |
+| 3    | `step-3/remote-catalog`   | Added HTTP catalog loading, validation and retry. GitHub hosts the sample catalog. |
+| 4    | `step-4/my-account`       | Added the Rick and Morty profile screen.                                           |
+| 5    | `step-5/testing`          | Added tests, CI and device test scenarios.                                         |
+| 6    | `step-6/eas-delivery`     | Prepared EAS builds and OTA configuration. The Expo project is linked.             |
 
 ## Main decisions
 
@@ -21,7 +21,7 @@ Each branch builds on the previous one. `main` combines all stages without remov
 
 ## Deployment status
 
-Remote hosting, native builds, OTA publication and device/visual checks are pending. Build configuration and local verification are complete. See [developer setup](SETUP.md) for environment details.
+The catalog is hosted on GitHub and the Expo project is linked. AWS/GCP hosting, native builds, OTA publication and device/visual checks are pending. Local verification is complete. See [developer setup](SETUP.md) for environment details.
 
 To inspect the work:
 

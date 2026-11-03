@@ -26,6 +26,15 @@
     "runtimeVersion": {
       "policy": "fingerprint"
     },
-    "plugins": ["expo-updates"]
+    "plugins": ["expo-updates"],
+    "extra": {
+      "eas": {
+        "projectId": "91128193-836e-4f8e-8ded-7a9a5b53f3df"
+      }
+    },
+    "owner": "lovearya05",
+    "updates": {
+      "url": "https://u.expo.dev/91128193-836e-4f8e-8ded-7a9a5b53f3df"
+    }
   }
 }

@@ -19,7 +19,7 @@ EXPO_PUBLIC_CATALOG_URL=http://COMPUTER-IP:8787/catalog.json
 
 ## Use a remote catalog
 
-Set `EXPO_PUBLIC_CATALOG_URL` in `.env.local` to a reachable HTTPS catalog URL, then run `npm start -- --clear`. The local API is not needed in this mode.
+Copy `.env.example` to `.env.local` to use the public GitHub catalog, then run `npm start -- --clear`. The local API is not needed in this mode.
 
 To host the sample data, upload both files in `public/data/` to the same folder on S3 or GCP. Allow public reads for these sample objects and `GET`/`HEAD` CORS access for web clients. Image paths resolve relative to the JSON URL. Cloud credentials must never appear in `EXPO_PUBLIC_*` values.
 
@@ -48,4 +48,4 @@ npx eas-cli@latest update --channel preview --environment preview --message "Des
 
 Reopen the installed app to download the update, then relaunch to apply it. Native dependency changes require a new compatible build.
 
-See [testing](TESTING.md) for verification commands and device scenarios. Remote deployment, native builds and OTA publication are currently pending.
+See [testing](TESTING.md) for verification commands and device scenarios. The Expo project is linked and the catalog is available on GitHub. Native builds and OTA publication are pending; AWS/GCP hosting is not configured.

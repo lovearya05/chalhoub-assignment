@@ -38,6 +38,6 @@ Last checked: **26 tests passed**, along with TypeScript, formatting and bundle 
 
 Each assignment step has its own `step-1` through `step-6` branch. `main` contains the combined result. See [the branch list and decisions](docs/PROGRESS.md).
 
-Remote catalog hosting, native builds and OTA publication are pending. EAS configuration is included; no build artifacts are available yet.
+The catalog is hosted on GitHub and the Expo project is linked. Native builds and OTA publication are pending. AWS/GCP hosting has not been configured.
 
 See [developer setup](docs/SETUP.md) for environment and build instructions, and [the assignment summary](docs/ASSIGNMENT.md) for requirements.
