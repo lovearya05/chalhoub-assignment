@@ -17,3 +17,11 @@ The original brief is preserved in [ASSIGNMENT.md](ASSIGNMENT.md).
 - Adding the same product/size/color increments quantity. Different variants remain separate. The store rejects invalid variants.
 - Kept ephemeral search, zoom and form inputs local. Bag state survives screen changes, but deliberately resets on application restart.
 - Added safe-area handling and a web target for accessible browser-based verification.
+
+## Step 3 — HTTP catalog
+
+- Removed the runtime fixture import. Every product field and image URL now comes from an HTTP JSON request, including related products.
+- Added a typed response validator, duplicate ID checks, HTTP errors, a 12-second timeout, loading feedback and retry.
+- Relative image URLs resolve against the catalog URL, so the same files work locally or on a remote bucket. Crops reference the supplied 375×1131 artwork.
+- Included a local CORS-enabled server and a combined development launcher that chooses the computer's LAN address for Expo Go.
+- **Pending external setup:** the user has no hosting account/project configured. The app supports remote hosting via `EXPO_PUBLIC_CATALOG_URL`, but no remote bucket upload has been performed. Local HTTP development does not fulfill the remote hosting requirement by itself.

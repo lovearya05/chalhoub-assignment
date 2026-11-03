@@ -9,7 +9,7 @@ export function ProductImage({ product }: { product: Product }) {
   const scale = crop ? width / crop.width : 1;
   return (
     <View onLayout={e => setWidth(e.nativeEvent.layout.width)} style={[styles.frame, { aspectRatio: crop ? crop.width / crop.height : 1 }]}>
-      <Image accessibilityLabel={product.title} source={product.imageUrl === 'reference' ? require('../../layout/task.png') : { uri: product.imageUrl }}
+      <Image accessibilityLabel={product.title} source={{ uri: product.imageUrl }}
         resizeMode={crop ? 'stretch' : 'contain'}
         style={crop ? { position: 'absolute', width: 375 * scale, height: 1131 * scale, left: -crop.x * scale, top: -crop.y * scale } : StyleSheet.absoluteFill} />
     </View>
