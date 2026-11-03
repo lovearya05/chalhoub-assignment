@@ -1,6 +1,6 @@
 # Test strategy and scenarios
 
-Run `npm run typecheck`, `npm test -- --runInBand --coverage`, `npm run format:check` and `npx expo export --platform web`. CI runs the same checks on GitHub pushes and pull requests after the repository is connected.
+Run `npm run typecheck`, `npm test -- --runInBand --coverage`, `npm run format:check` and `npx expo export --platform all`. CI runs the same checks on GitHub pushes and pull requests after the repository is connected.
 
 ## Automated coverage
 

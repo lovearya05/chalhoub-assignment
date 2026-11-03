@@ -5,6 +5,7 @@
   "dependencies": {
     "expo": "~58.0.22",
     "expo-status-bar": "~58.0.4",
+    "expo-updates": "~58.0.20",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-native": "0.88.1",
@@ -33,7 +34,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "release:check": "node --env-file-if-exists=.env.local scripts/check-release.mjs",
+    "eas-build-post-install": "node scripts/check-release.mjs"
   },
   "private": true,
   "engines": {

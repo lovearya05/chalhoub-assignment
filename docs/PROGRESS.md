@@ -41,3 +41,13 @@ The original brief is preserved in [ASSIGNMENT.md](ASSIGNMENT.md).
 - Added image failure feedback with retry. Kept internal configuration instructions in documentation rather than product-facing error messages.
 - Browser automation was attempted but its host was unavailable. Device flows and visual acceptance checks remain explicitly unverified.
 - Validation at this stage: TypeScript passed; 26 tests in 4 suites passed; measured line coverage 92.71%; Prettier passed; web export succeeded. Actual HTTP catalog/image endpoints returned successfully. Coverage is an indicator, not a substitute for device checks.
+
+## Step 6 — EAS and delivery preparation
+
+- Installed Expo Updates; added fingerprint runtime compatibility and Android/iOS identifiers.
+- Added preview APK + iOS Simulator profiles, a signed iPhone preview profile and production profiles. Preview builds and updates use the same channel/environment.
+- Added release preflight checks so cloud builds cannot silently ship the local development URL or an unlinked update project.
+- Documented first-time GitHub setup, publishing every branch, remote S3 JSON/image hosting, Expo linking, environment configuration, native builds, OTA verification and a truthful delivery record.
+- **Pending external setup:** no GitHub repository, cloud data deployment, Expo project, native build or OTA update has been created. These require the user's account setup and, for physical iOS builds, signing access. The bonus is prepared but not claimed as completed.
+
+- Final verification: 26 tests passed, TypeScript and formatting passed, and Android/iOS/web exports all succeeded. The release guard correctly rejects the missing real project and remote URL. Native artifacts remain unbuilt.
