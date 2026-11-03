@@ -9,7 +9,7 @@ npm run format:check
 npx expo export --platform all
 ```
 
-Last run: **26 tests passed in 4 suites**, with **92.71% line coverage**. TypeScript, formatting and Android/iOS/web bundle exports also passed. GitHub Actions runs these checks after pushing.
+Last run: **26 tests passed in 4 suites**, with **92.71% line coverage**. TypeScript, formatting and Android/iOS/web bundle exports also passed. The GitHub Actions workflow runs these checks on pushes and pull requests.
 
 Jest and React Native Testing Library cover:
 
@@ -32,7 +32,7 @@ Tests mock HTTP responses so they can run without the live APIs.
 - [ ] Disconnect the network or block an image, then retry.
 - [ ] Install both native builds and verify an OTA update after relaunch.
 
-These checks are **pending**. Browser automation was unavailable during implementation. Bundle exports do not replace native launch tests.
+Manual verification is **pending**. Bundle exports validate bundling; installed builds still need device and visual checks.
 
 ## Device automation
 

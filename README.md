@@ -34,10 +34,10 @@ npx expo export --platform all
 
 Last checked: **26 tests passed**, along with TypeScript, formatting and bundle exports. Device and visual checks are still pending. See [test scenarios](docs/TESTING.md).
 
-## Git history and delivery
+## Project history and status
 
 Each assignment step has its own `step-1` through `step-6` branch. `main` contains the combined result. See [the branch list and decisions](docs/PROGRESS.md).
 
-**Still to do:** push to GitHub, host the catalog remotely, create native builds and publish an OTA update. EAS configuration is ready, but builds have not been created.
+Remote catalog hosting, native builds and OTA publication are pending. EAS configuration is included; no build artifacts are available yet.
 
-Follow [Setup and delivery](docs/SETUP.md) in order. The [assignment summary](docs/ASSIGNMENT.md) lists the requirements.
+See [developer setup](docs/SETUP.md) for environment and build instructions, and [the assignment summary](docs/ASSIGNMENT.md) for requirements.

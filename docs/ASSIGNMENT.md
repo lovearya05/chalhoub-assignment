@@ -2,7 +2,7 @@
 
 A shortened version of the supplied brief. The original text is preserved in the first Git commit.
 
-Build an **Expo / React Native app with TypeScript**, matching [layout/task.png](../layout/task.png). Make every control functional.
+The assignment requires an **Expo / React Native app with TypeScript**, matching [layout/task.png](../layout/task.png), with functional controls.
 
 ## Required steps
 
@@ -15,7 +15,7 @@ Build an **Expo / React Native app with TypeScript**, matching [layout/task.png]
 
 Product data must include image URL, title, price, sizes, colors and description.
 
-## Delivery rules
+## Submission requirements
 
 - Use a separate branch for each step and keep incremental commits accessible.
 - Keep the README clear about running, testing and implementation decisions.

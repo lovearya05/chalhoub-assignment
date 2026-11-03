@@ -42,3 +42,6 @@ yarn-error.*
 
 # Test reports
 coverage/
+
+# Local submission notes
+/PERSONAL_SETUP.md

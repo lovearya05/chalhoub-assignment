@@ -19,9 +19,9 @@ Each branch builds on the previous one. `main` combines all stages without remov
 - Labelled the blank reference button “ADD TO BAG” and added account/bag links.
 - Loaded every product field over HTTP. A local API makes development possible before cloud hosting is ready.
 
-## What remains
+## Deployment status
 
-GitHub publishing, remote hosting, native builds, OTA publication and device/visual checks. Follow [SETUP.md](SETUP.md) to finish delivery.
+Remote hosting, native builds, OTA publication and device/visual checks are pending. Build configuration and local verification are complete. See [developer setup](SETUP.md) for environment details.
 
 To inspect the work:
 
