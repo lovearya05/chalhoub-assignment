@@ -1,0 +1,9 @@
+.git
+node_modules
+.expo
+dist
+coverage
+.env*.local
+.maestro
+layout
+docs

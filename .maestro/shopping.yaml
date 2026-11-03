@@ -1,0 +1,22 @@
+appId: com.lovepreet.tigerstore
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: Tiger Medium Red
+    timeout: 20000
+- scrollUntilVisible:
+    element: ADD TO BAG
+- tapOn: ADD TO BAG
+- assertVisible: Please choose a size and color.
+- tapOn: Size M
+- tapOn: Color Black
+- tapOn: ADD TO BAG
+- assertVisible: Added to your bag.
+- scrollUntilVisible:
+    element: Bag (1)
+    direction: UP
+- tapOn: Bag (1)
+- assertVisible: 'Total: AED 250'
+- tapOn: Remove Tiger Medium Red M Black
+- assertVisible: Your bag is empty.
