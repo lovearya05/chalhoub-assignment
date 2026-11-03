@@ -1,48 +1,45 @@
-# Test strategy and scenarios
+# Testing
 
-Run `npm run typecheck`, `npm test -- --runInBand --coverage`, `npm run format:check` and `npx expo export --platform all`. CI runs the same checks on GitHub pushes and pull requests after the repository is connected.
+## Automated checks
 
-## Automated coverage
+```sh
+npm run typecheck
+npm test -- --runInBand --coverage
+npm run format:check
+npx expo export --platform all
+```
 
-Jest with the Expo preset runs domain tests and React Native Testing Library integration tests. HTTP responses are mocked in tests; no third-party outage or product image download is needed to run the suite. Production code still makes real HTTP requests.
+Last run: **26 tests passed in 4 suites**, with **92.71% line coverage**. TypeScript, formatting and Android/iOS/web bundle exports also passed. GitHub Actions runs these checks after pushing.
 
-| Area             | Scenarios                                                                                                                                                |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Catalog contract | Relative URLs, all five products, empty/malformed data, duplicate IDs, invalid price/size/category/color, unsafe image URLs, invalid/out-of-bounds crops |
-| Requests         | Successful JSON, HTTP 503, malformed JSON, offline failure, abort after 12 seconds                                                                       |
-| Shopping state   | Invalid variants rejected; identical variants merged; size/color variants separate; total calculation; removal; bag preserved during navigation          |
-| Product screen   | Loading real app with mocked network; required selection feedback; add/remove/quantity; search; empty category; related product selection; image modal   |
-| Account          | Remote data rendering; origin and avatar mapping; refresh; back navigation; failed request and retry; malformed response rejection                       |
-| Failure recovery | Catalog and account retries restore usable screens                                                                                                       |
+Jest and React Native Testing Library cover:
 
-The suite checks observable behavior without snapshots of implementation details. Native safe-area metrics are mocked for stable layout-independent assertions.
+- Invalid catalog data, duplicate IDs and image URLs.
+- Network errors, malformed responses and request timeouts.
+- Required size/color selection, bag quantities, totals and removal.
+- Search, category filters, related products and image zoom.
+- Account loading, refresh, navigation and retry.
 
-## Functional device tests
+Tests mock HTTP responses so they can run without the live APIs.
 
-`.maestro/shopping.yaml` and `.maestro/account.yaml` are proposed runnable device flows for an installed standalone build with application ID `com.lovepreet.tigerstore`. Install [Maestro](https://docs.maestro.dev/getting-started/installing-maestro), install the matching preview build, then run `maestro test .maestro/`. Use a reachable remote HTTPS catalog for these tests. These flows have **not** been run here because no signed native build or simulator session is available.
+## Manual checks
 
-## Manual acceptance checklist
+- [ ] Compare the page with `layout/task.png` on a phone-sized screen.
+- [ ] Check scrolling, larger text and screen-reader labels.
+- [ ] Try empty searches/categories and switch related products.
+- [ ] Add the same variant twice, add another variant, then remove items.
+- [ ] Open and close the image/bag; check Android back navigation.
+- [ ] Load the account, refresh it and return to the shop.
+- [ ] Disconnect the network or block an image, then retry.
+- [ ] Install both native builds and verify an OTA update after relaunch.
 
-| Scenario                                    | Expected result                                                                                                                     |
-| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Compare at 375px width with layout/task.png | Similar hierarchy, red hero, four swatches and related thumbnails. Account/bag links and labelled action are intentional additions. |
-| Narrow phone, tablet, larger font settings  | Scrollable page; content stays readable, centered and within viewport.                                                              |
-| VoiceOver / TalkBack / keyboard             | Buttons and inputs named; selected options announced; feedback announced; modal can be closed.                                      |
-| Select size only / color only; add          | Prompt asks for both selections; bag unchanged.                                                                                     |
-| Same variant twice / different variant      | Quantity 2 on first row; second variant in separate row; correct total.                                                             |
-| Search mixed case / whitespace / no results | Case-insensitive, trimmed results; useful empty state.                                                                              |
-| Switch each category                        | Correct catalog filter; empty categories explicitly handled. Seed catalog only contains MEN.                                        |
-| Open related product                        | Product updates and previous size/color selection clears.                                                                           |
-| Open/close enlarged image and bag           | Back/close dismisses modal; page remains usable.                                                                                    |
-| Disable network before catalog/account load | Error shown; restore network and retry successfully.                                                                                |
-| Block product image URL                     | Image placeholder appears with retry action.                                                                                        |
-| Slow API past 12 seconds                    | Timeout message and retry action.                                                                                                   |
-| Leave account while request pending         | No stale profile update or navigation change.                                                                                       |
-| Android back on account / modal             | Return to shop / close modal.                                                                                                       |
-| Restart app                                 | Bag resets; persistence is deliberately outside scope.                                                                              |
-| Install Android APK / iOS simulator build   | Cold launch, HTTPS catalog, images, account and bag work.                                                                           |
-| EAS Update on preview channel               | Compatible installed build downloads update and applies it after relaunch.                                                          |
+These checks are **pending**. Browser automation was unavailable during implementation. Bundle exports do not replace native launch tests.
 
-## Verification limits
+## Device automation
 
-The automated suite and exports do not prove native visual fidelity, accessibility focus trapping or touch behavior. The browser automation host was unavailable during implementation, so no browser screenshot comparison was completed. Manual device and visual checks above remain to be performed. Build/OTA publication results must be recorded after Expo setup; configuration alone is not a successful build.
+Install [Maestro](https://docs.maestro.dev/getting-started/installing-maestro) and a preview build using a reachable remote catalog, then run:
+
+```sh
+maestro test .maestro/
+```
+
+The shopping and account flows are prepared but have **not been run** on a device.
