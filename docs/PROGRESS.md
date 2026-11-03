@@ -25,3 +25,10 @@ The original brief is preserved in [ASSIGNMENT.md](ASSIGNMENT.md).
 - Relative image URLs resolve against the catalog URL, so the same files work locally or on a remote bucket. Crops reference the supplied 375×1131 artwork.
 - Included a local CORS-enabled server and a combined development launcher that chooses the computer's LAN address for Expo Go.
 - **Pending external setup:** the user has no hosting account/project configured. The app supports remote hosting via `EXPO_PUBLIC_CATALOG_URL`, but no remote bucket upload has been performed. Local HTTP development does not fulfill the remote hosting requirement by itself.
+
+## Step 4 — account screen
+
+- Added a presumed logged-in account backed by `GET https://rickandmortyapi.com/api/character/1`.
+- Shows the real API avatar, name, status, species, gender, origin and location, with loading, validation, error, retry and refresh.
+- Added back navigation, including Android hardware back. The shared bag survives account navigation.
+- Request completion is ignored after leaving the account screen to prevent stale UI updates.
